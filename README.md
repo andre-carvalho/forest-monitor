@@ -16,6 +16,18 @@ $ Docker/docker-build.sh
 
 To run the application locally, be sure too to install the following dependencies:
 
+We remommends that you use the virtual environment of python. The following steps assums that you use a Linux O.S. as development environment system.
+
+Command steps:
+```sh
+# Go to the base directory of workspace project and runs
+python3 -m venv venv
+source venv/bin/activate
+# we assums that your anvironment have the libraries that python dependencies need.
+pip install -r docker-base/requirements.txt
+```
+
+
 .. code-block:: shell
 $ apt-get update 
 $ apt-get install -y build-essential libpq-dev python3-pip git
