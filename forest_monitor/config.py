@@ -20,6 +20,12 @@ class Config():
     MASK_TABLE_DETER = os.environ.get('MASK_TABLE_DETER')
     MASK_TABLE_PRODES = os.environ.get('MASK_TABLE_PRODES')
     DESTINATION_TABLE = os.environ.get('DESTINATION_TABLE')
+    try:
+        HOST = os.environ.get('SERVER_HOST', '0.0.0.0')
+        PORT = int(os.environ.get('PORT', '5000'))
+    except ValueError:
+        HOST = '0.0.0.0'
+        PORT = 5000
   
 
 class ProductionConfig(Config):
@@ -30,6 +36,7 @@ class ProductionConfig(Config):
 class DevelopmentConfig(Config):
     """Development Mode"""
     DEVELOPMENT = True
+    DEBUG = True
 
 
 class TestingConfig(Config):
