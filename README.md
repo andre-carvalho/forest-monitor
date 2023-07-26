@@ -24,7 +24,7 @@ Command steps:
 python3 -m venv venv
 source venv/bin/activate
 # we assums that your anvironment have the libraries that python dependencies need.
-pip install -r docker-base/requirements.txt
+pip install -r forest_monitor/requirements.txt
 ```
 
 
