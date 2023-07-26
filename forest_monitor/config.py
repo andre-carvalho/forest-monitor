@@ -3,13 +3,15 @@ import os
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 APPNAME = os.environ.get('CLIENT_AUDIENCE', '')
 
+
 def get_settings(env):
     return CONFIG.get(env)
+
 
 def getCurrentConfig():
     config = get_settings(os.environ.get('ENVIRONMENT', 'DevelopmentConfig'))
     return config
-    
+
 
 class Config():
     DEBUG = False
@@ -50,4 +52,3 @@ CONFIG = {
     "ProductionConfig": ProductionConfig(),
     "TestingConfig": TestingConfig()
 }
-
